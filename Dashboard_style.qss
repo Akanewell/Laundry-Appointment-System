@@ -1,89 +1,200 @@
-
-
+/* ============================================================================
+   MAIN APPLICATION WINDOW & GENERAL SETUP
+   ============================================================================ */
 QMainWindow {
     background-color: #ebf1fa;
 }
 
 QLabel {
-    color: #303030;
+    color: #334e68;
     font-family: "Segoe UI", Arial, sans-serif;
-    font-size: 15px;
 }
 
-#sidebar_layout {
-    background-color: #b6c9e0;
-    color: #fcfeff;
+/* ============================================================================
+   LEFT NAVIGATION SIDEBAR (WITH ROUNDED EDGES)
+   ============================================================================ */
+#sidebar_container {
+    background-color: #a4beda;
+    border-radius: 18px;
+    margin: 10px 0px 10px 10px;
 }
 
-#dashboard_btn {
+#nav_btn {
     background-color: transparent;
-}
-
-#transaction_btn {
-    background-color: transparent;
-}
-
-#about_btn {
-    background-color: transparent;
-}
-
-#exit_btn {
-    background-color: transparent;
-}
-
-#header {
-    font-size: 29px;
-    font-weight: bold;
-    color: #3c5670;
-    text-transform: uppercase;
-    }
-
-#addApptBtn {
-
     border: none;
-    border-radius: 8px;
-    padding: 8px;
+    border-radius: 10px;
+    padding: 0px;
+}
+
+#nav_btn:hover {
+    background-color: #90afd0;
+}
+
+#nav_btn:pressed {
+    background-color: #7b9cc0;
+}
+
+/* White Divider Line Below Top Icon */
+#sidebar_divider {
+    color: #ffffff;
+    background-color: #ffffff;
+    border: none;
+    max-height: 2px;
+}
+
+/* ============================================================================
+   DASHBOARD HEADERS & TOP BAR
+   ============================================================================ */
+#header_title {
+    font-size: 26px;
+    font-weight: 800;
+    color: #2c3e50;
+    letter-spacing: 1px;
+}
+
+#queue_title {
+    font-size: 15px;
     font-weight: bold;
-    background-color: #6491bf;
-    text-align: center;
-    color: #fcfeff;
-    margin-right: 20px;
+    color: #1e293b;
 }
 
-#inQueue_text {
-    font-weight: bold;
-    padding-left: 20px;
+#queue_subtext {
+    font-size: 13px;
+    color: #475569;
 }
 
-#total_text {
-
-    padding-left: 20px;
+/* Add Appointment Pill Button */
+#addApptBtn {
+    border: none;
+    border-radius: 12px;
+    padding: 8px 20px;
+    font-size: 13px;
+    font-weight: 600;
+    background-color: #527ea9;
+    color: #ffffff;
 }
 
-#customers_layout {
-    background-color: #FFFFFF;
-    border-radius: 15px;
-    margin: 20px;
-    margin-top: 5px;
+#addApptBtn:hover {
+    background-color: #41688f;
 }
 
-#customer_name {
-    padding-right: 10px;
-    background-color: transparent;
-    font-size: 18px;
+#addApptBtn:pressed {
+    background-color: #345678;
 }
 
-#statusDot {
-    padding-left: 50px;
+/* ============================================================================
+   CENTRAL CUSTOMER CARD GRID
+   ============================================================================ */
+#cards_container {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 15px;
 }
 
-#cardLine { color: #c8cfd8; }
+#customer_name_label {
+    color: #1e293b;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
 
-#details_layout {
-    background-color: #FFFFFF;
+#card_line {
+    color: #cbd5e1;
+    background-color: #cbd5e1;
+    border: none;
+    max-height: 2px;
+}
+
+/* ============================================================================
+   RIGHT DETAILS SIDEBAR PANEL
+   ============================================================================ */
+#details_container {
+    background-color: #ffffff;
+    border-left: 1px solid #e2e8f0;
 }
 
 #details_placeholder {
-    color: #939393;
-    font-size: 15px;
+    color: #8292a4;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+#details_customer_header {
+    font-size: 18px;
+    font-weight: bold;
+    color: #1e293b;
+}
+
+#status_combobox {
+    background-color: #65b869;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 12px;
+    padding: 8px 16px;
+    border: none;
+}
+
+#status_combobox::drop-down {
+    border: none;
+    width: 24px;
+}
+
+#status_combobox QAbstractItemView {
+    background-color: #ffffff;
+    color: #1e293b;
+    selection-background-color: #e2e8f0;
+    selection-color: #1e293b;
+}
+
+#section_heading {
+    font-size: 14px;
+    font-weight: bold;
+    color: #1e293b;
+    margin-top: 10px;
+}
+
+#info_label {
+    font-size: 13px;
+    color: #475569;
+}
+
+/* ============================================================================
+   TRANSACTION HISTORY VIEW
+   ============================================================================ */
+#tx_card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 16px;
+}
+
+#tx_name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #1e293b;
+}
+
+#tx_amount {
+    font-size: 22px;
+    font-weight: 800;
+    color: #1e293b;
+}
+
+#tx_date {
+    font-size: 13px;
+    color: #64748b;
+}
+
+#tx_toggle_btn {
+    background: transparent;
+    border: none;
+    color: #8292a4;
+    font-weight: bold;
+    font-size: 13px;
+    text-align: left;
+    padding: 0px;
+}
+
+#tx_toggle_btn:hover {
+    color: #527ea9;
 }
